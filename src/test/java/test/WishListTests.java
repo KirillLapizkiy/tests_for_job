@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.fail;
 
-public class LoginLogoutTests {
+public class WishListTests {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -24,16 +24,22 @@ public class LoginLogoutTests {
     }
 
     @Test
-    public void testUntitledTestCase() throws Exception {
-        driver.get("https://mail.ru/");
-        driver.findElement(By.name("login")).clear();
-        driver.findElement(By.name("login")).sendKeys("testers42");
-        driver.findElement(By.cssSelector("svg.icon-next.svelte-no02r")).click();
-        driver.findElement(By.xpath("//div[2]")).click();
-        driver.findElement(By.name("password")).clear();
-        driver.findElement(By.name("password")).sendKeys("GoodSecret");
-        driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-        driver.findElement(By.id("PH_logoutLink")).click();
+    public void addWishListTest() throws Exception {
+        driver.get("http://automationpractice.com/index.php");
+        driver.findElement(By.linkText("Sign in")).click();
+        driver.findElement(By.id("email")).click();
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys("kir9lapizkiy@gmail.com");
+        driver.findElement(By.xpath("//form[@id='login_form']/div/div")).click();
+        driver.findElement(By.id("passwd")).click();
+        driver.findElement(By.id("passwd")).clear();
+        driver.findElement(By.id("passwd")).sendKeys("GoodSecret");
+        driver.findElement(By.xpath("//button[@id='SubmitLogin']/span")).click();
+        driver.findElement(By.xpath("//img[@alt='My Store']")).click();
+        driver.findElement(By.xpath("//img[@alt='Faded Short Sleeve T-shirts']")).click();
+        driver.findElement(By.id("wishlist_button")).click();
+        driver.findElement(By.xpath("//body[@id='product']/div[2]/div/div/a")).click();
+        driver.findElement(By.linkText("Sign out")).click();
     }
 
     @AfterClass(alwaysRun = true)
