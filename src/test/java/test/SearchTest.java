@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class WishListTests {
+public class SearchTest {
     private WebDriver wd;
 
     @BeforeClass(alwaysRun = true)
@@ -29,23 +29,20 @@ public class WishListTests {
         wd.findElement(By.id("passwd")).sendKeys("GoodSecret");
         wd.findElement(By.xpath("//button[@id='SubmitLogin']/span")).click();
         wd.findElement(By.xpath("//img[@alt='My Store']")).click();
-        wd.findElement(By.id("search_query_top")).click();
-        wd.findElement(By.id("search_query_top")).clear();
-        wd.findElement(By.id("search_query_top")).sendKeys("Faded Short Sleeve T-shirts");
-            }
+    }
 
     @Test
-    public void addWishListTest() throws Exception {
-        wd.findElement(By.xpath("//img[@alt='Faded Short Sleeve T-shirts']")).click();
-        wd.findElement(By.id("wishlist_button")).click();
-        wd.findElement(By.xpath("//body[@id='product']/div[2]/div/div/a")).click();
-        wd.findElement(By.linkText("Sign out")).click();
+    public void testSearchLine() throws Exception {
+        wd.findElement(By.id("search_query_top")).click();
+        wd.findElement(By.id("search_query_top")).clear();
+        wd.findElement(By.id("search_query_top")).sendKeys("top");
+        wd.findElement(By.name("submit_search")).click();
     }
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
         wd.quit();
-        }
+    }
 
     private boolean isElementPresent(By by) {
         try {
@@ -64,4 +61,5 @@ public class WishListTests {
             return false;
         }
     }
+
 }
