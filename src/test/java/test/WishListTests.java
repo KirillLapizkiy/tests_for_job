@@ -19,14 +19,14 @@ public class WishListTests {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wd.get("http://automationpractice.com/index.php");
-        login();
+        login("kir9lapizkiy@gmail.com", "GoodSecret");
         mainPage();
     }
 
-    private void startSearch(String nameProduct) {
+    private void startSearch(SearchData searchData) {
         wd.findElement(By.id("search_query_top")).click();
         wd.findElement(By.id("search_query_top")).clear();
-        wd.findElement(By.id("search_query_top")).sendKeys(nameProduct);
+        wd.findElement(By.id("search_query_top")).sendKeys(searchData.getNameProduct());
         wd.findElement(By.name("submit_search")).click();
     }
 
@@ -34,21 +34,21 @@ public class WishListTests {
         wd.findElement(By.xpath("//img[@alt='My Store']")).click();
     }
 
-    private void login() {
+    private void login(String username, String password) {
         wd.findElement(By.linkText("Sign in")).click();
         wd.findElement(By.id("email")).click();
         wd.findElement(By.id("email")).clear();
-        wd.findElement(By.id("email")).sendKeys("kir9lapizkiy@gmail.com");
+        wd.findElement(By.id("email")).sendKeys(username);
         wd.findElement(By.xpath("//form[@id='login_form']/div/div")).click();
         wd.findElement(By.id("passwd")).click();
         wd.findElement(By.id("passwd")).clear();
-        wd.findElement(By.id("passwd")).sendKeys("GoodSecret");
+        wd.findElement(By.id("passwd")).sendKeys(password);
         wd.findElement(By.xpath("//button[@id='SubmitLogin']/span")).click();
     }
 
     @Test
     public void addWishListTest() throws Exception {
-        startSearch("Faded Short Sleeve T-shirts");
+        startSearch(new SearchData("Faded Short Sleeve T-shirts"));
         choiceProduct();
         addWhishList();
         closeWindowAfterChoiceProduct();
