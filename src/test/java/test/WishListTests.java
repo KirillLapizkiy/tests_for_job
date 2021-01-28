@@ -19,6 +19,22 @@ public class WishListTests {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wd.get("http://automationpractice.com/index.php");
+        login();
+        mainPage();
+    }
+
+    private void startSearch(String nameProduct) {
+        wd.findElement(By.id("search_query_top")).click();
+        wd.findElement(By.id("search_query_top")).clear();
+        wd.findElement(By.id("search_query_top")).sendKeys(nameProduct);
+        wd.findElement(By.name("submit_search")).click();
+    }
+
+    private void mainPage() {
+        wd.findElement(By.xpath("//img[@alt='My Store']")).click();
+    }
+
+    private void login() {
         wd.findElement(By.linkText("Sign in")).click();
         wd.findElement(By.id("email")).click();
         wd.findElement(By.id("email")).clear();
@@ -28,24 +44,37 @@ public class WishListTests {
         wd.findElement(By.id("passwd")).clear();
         wd.findElement(By.id("passwd")).sendKeys("GoodSecret");
         wd.findElement(By.xpath("//button[@id='SubmitLogin']/span")).click();
-        wd.findElement(By.xpath("//img[@alt='My Store']")).click();
-        wd.findElement(By.id("search_query_top")).click();
-        wd.findElement(By.id("search_query_top")).clear();
-        wd.findElement(By.id("search_query_top")).sendKeys("Faded Short Sleeve T-shirts");
-            }
+    }
 
     @Test
     public void addWishListTest() throws Exception {
-        wd.findElement(By.xpath("//img[@alt='Faded Short Sleeve T-shirts']")).click();
-        wd.findElement(By.id("wishlist_button")).click();
-        wd.findElement(By.xpath("//body[@id='product']/div[2]/div/div/a")).click();
+        startSearch("Faded Short Sleeve T-shirts");
+        choiceProduct();
+        addWhishList();
+        closeWindowAfterChoiceProduct();
+        logout();
+    }
+
+    private void logout() {
         wd.findElement(By.linkText("Sign out")).click();
+    }
+
+    private void closeWindowAfterChoiceProduct() {
+        wd.findElement(By.xpath("//body[@id='product']/div[2]/div/div/a")).click();
+    }
+
+    private void addWhishList() {
+        wd.findElement(By.id("wishlist_button")).click();
+    }
+
+    private void choiceProduct() {
+        wd.findElement(By.xpath("//img[@alt='Faded Short Sleeve T-shirts']")).click();
     }
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
         wd.quit();
-        }
+    }
 
     private boolean isElementPresent(By by) {
         try {

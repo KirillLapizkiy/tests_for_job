@@ -19,6 +19,15 @@ public class SearchTest {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wd.get("http://automationpractice.com/index.php");
+        login();
+        mainPage();
+    }
+
+    private void mainPage() {
+        wd.findElement(By.xpath("//img[@alt='My Store']")).click();
+    }
+
+    private void login() {
         wd.findElement(By.linkText("Sign in")).click();
         wd.findElement(By.id("email")).click();
         wd.findElement(By.id("email")).clear();
@@ -28,14 +37,22 @@ public class SearchTest {
         wd.findElement(By.id("passwd")).clear();
         wd.findElement(By.id("passwd")).sendKeys("GoodSecret");
         wd.findElement(By.xpath("//button[@id='SubmitLogin']/span")).click();
-        wd.findElement(By.xpath("//img[@alt='My Store']")).click();
     }
 
     @Test
     public void testSearchLine() throws Exception {
+        startSearch( "top");
+        logout();
+    }
+
+    private void logout() {
+        wd.findElement(By.linkText("Sign out")).click();
+    }
+
+    private void startSearch(String product) {
         wd.findElement(By.id("search_query_top")).click();
         wd.findElement(By.id("search_query_top")).clear();
-        wd.findElement(By.id("search_query_top")).sendKeys("top");
+        wd.findElement(By.id("search_query_top")).sendKeys(product);
         wd.findElement(By.name("submit_search")).click();
     }
 
