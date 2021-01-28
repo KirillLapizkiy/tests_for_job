@@ -1,33 +1,25 @@
 package test;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class WishListTests {
+public class EditFromWishList {
     private WebDriver wd;
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wd.get("http://automationpractice.com/index.php");
         login("kir9lapizkiy@gmail.com", "GoodSecret");
         mainPage();
-    }
-
-    private void startSearch(SearchData searchData) {
-        wd.findElement(By.id("search_query_top")).click();
-        wd.findElement(By.id("search_query_top")).clear();
-        wd.findElement(By.id("search_query_top")).sendKeys(searchData.getNameProduct());
-        wd.findElement(By.name("submit_search")).click();
     }
 
     private void mainPage() {
@@ -47,33 +39,22 @@ public class WishListTests {
     }
 
     @Test
-    public void addWishListTest() throws Exception {
-        startSearch(new SearchData("Faded Short Sleeve T-shirts"));
-        choiceProduct();
-        addWhishList();
-        closeWindowAfterChoiceProduct();
-        logout();
-    }
-
-    private void logout() {
+    public void testEditProductInWishList() throws Exception {
+        wd.get("http://automationpractice.com/index.php?controller=my-account");
+        wd.findElement(By.xpath("//div[@id='center_column']/div/div[2]/ul/li/a/span")).click();
+        wd.findElement(By.linkText("My wishlist")).click();
+        wd.findElement(By.id("quantity_1_1")).click();
+        wd.findElement(By.id("quantity_1_1")).clear();
+        wd.findElement(By.id("quantity_1_1")).sendKeys("150");
+        wd.findElement(By.xpath("//li[@id='wlp_1_1']/div/div[2]/div/div[2]/a/span")).click();
+        wd.findElement(By.xpath("//div[@id='mywishlist']/ul/li/a/span")).click();
         wd.findElement(By.linkText("Sign out")).click();
     }
 
-    private void closeWindowAfterChoiceProduct() {
-        wd.findElement(By.xpath("//body[@id='product']/div[2]/div/div/a")).click();
-    }
-
-    private void addWhishList() {
-        wd.findElement(By.id("wishlist_button")).click();
-    }
-
-    private void choiceProduct() {
-        wd.findElement(By.xpath("//img[@alt='Faded Short Sleeve T-shirts']")).click();
-    }
-
-    @AfterClass(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public void tearDown() throws Exception {
         wd.quit();
+
     }
 
     private boolean isElementPresent(By by) {
@@ -85,12 +66,5 @@ public class WishListTests {
         }
     }
 
-    private boolean isAlertPresent() {
-        try {
-            wd.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
 }
+

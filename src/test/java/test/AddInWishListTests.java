@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class SearchTest {
+public class AddInWishListTests {
     private WebDriver wd;
 
     @BeforeMethod(alwaysRun = true)
@@ -21,6 +21,13 @@ public class SearchTest {
         wd.get("http://automationpractice.com/index.php");
         login("kir9lapizkiy@gmail.com", "GoodSecret");
         mainPage();
+    }
+
+    private void startSearch(SearchData searchData) {
+        wd.findElement(By.id("search_query_top")).click();
+        wd.findElement(By.id("search_query_top")).clear();
+        wd.findElement(By.id("search_query_top")).sendKeys(searchData.getNameProduct());
+        wd.findElement(By.name("submit_search")).click();
     }
 
     private void mainPage() {
@@ -40,8 +47,11 @@ public class SearchTest {
     }
 
     @Test
-    public void testSearchLine() throws Exception {
-        startSearch(new SearchData( "top"));
+    public void addWishListTest() throws Exception {
+        startSearch(new SearchData("Faded Short Sleeve T-shirts"));
+        choiceProduct();
+        addWhishList();
+        closeWindowAfterChoiceProduct();
         logout();
     }
 
@@ -49,11 +59,16 @@ public class SearchTest {
         wd.findElement(By.linkText("Sign out")).click();
     }
 
-    private void startSearch(SearchData searchData) {
-        wd.findElement(By.id("search_query_top")).click();
-        wd.findElement(By.id("search_query_top")).clear();
-        wd.findElement(By.id("search_query_top")).sendKeys(searchData.getNameProduct());
-        wd.findElement(By.name("submit_search")).click();
+    private void closeWindowAfterChoiceProduct() {
+        wd.findElement(By.xpath("//body[@id='product']/div[2]/div/div/a")).click();
+    }
+
+    private void addWhishList() {
+        wd.findElement(By.id("wishlist_button")).click();
+    }
+
+    private void choiceProduct() {
+        wd.findElement(By.xpath("//img[@alt='Faded Short Sleeve T-shirts']")).click();
     }
 
     @AfterMethod(alwaysRun = true)
@@ -78,5 +93,4 @@ public class SearchTest {
             return false;
         }
     }
-
 }
