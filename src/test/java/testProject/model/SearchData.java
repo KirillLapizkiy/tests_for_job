@@ -1,4 +1,4 @@
-package test;
+package testProject.model;
 
 public class SearchData {
     private final String nameProduct;
