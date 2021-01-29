@@ -7,8 +7,8 @@ public class SearchTest extends TestBase {
 
     @Test
     public void testSearchLine() throws Exception {
-        app.startSearch(new SearchData("top"));
-        app.logout();
+        app.getSearchHelper().startSearch(new SearchData("top"));
+        app.getWishListHelper().logout();
     }
 
 }

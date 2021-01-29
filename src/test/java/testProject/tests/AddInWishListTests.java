@@ -7,11 +7,11 @@ public class AddInWishListTests extends TestBase {
 
     @Test
     public void addWishListTest() throws Exception {
-        app.startSearch(new SearchData("Faded Short Sleeve T-shirts"));
-        app.choiceProduct();
-        app.addWhishList();
-        app.closeWindowAfterChoiceProduct();
-        app.logout();
+        app.getSearchHelper().startSearch(new SearchData("Faded Short Sleeve T-shirts"));
+        app.getWishListHelper().choiceProduct();
+        app.getWishListHelper().addWhishList();
+        app.getWishListHelper().closeWindowAfterChoiceProduct();
+        app.getWishListHelper().logout();
     }
 
 }

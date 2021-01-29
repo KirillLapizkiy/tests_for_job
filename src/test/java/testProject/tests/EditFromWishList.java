@@ -6,11 +6,11 @@ public class EditFromWishList extends TestBase {
 
     @Test
     public void testEditProductInWishList() throws Exception {
-        app.EntenInWishList();
-        app.ChoiceFirstPositionInWishList();
-        app.AssignedNumbers("150");
-        app.ExitFromWishList();
-        app.logout();
+        app.getWishListHelper().EntenInWishList();
+        app.getWishListHelper().ChoiceFirstPositionInWishList();
+        app.getWishListHelper().AssignedNumbers("150");
+        app.getWishListHelper().ExitFromWishList();
+        app.getWishListHelper().logout();
     }
 
 }
