@@ -18,7 +18,7 @@ public class TestBase {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wd.get("http://automationpractice.com/index.php");
-        login("kir9lapizkiy@gmail.com", "GoodSecret");
+        login("kir9@sibmail.com", "GoodSecret");
         mainPage();
     }
 
