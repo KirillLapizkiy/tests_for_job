@@ -4,17 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import testProject.model.SearchData;
 
-public class SearchHelper {
-    private WebDriver wd;
+public class SearchHelper extends HelperBase {
 
     public SearchHelper(WebDriver wd) {
-        this.wd = wd;
+        super(wd);
     }
 
     public void startSearch(SearchData searchData) {
-        wd.findElement(By.id("search_query_top")).click();
-        wd.findElement(By.id("search_query_top")).clear();
-        wd.findElement(By.id("search_query_top")).sendKeys(searchData.getNameProduct());
-        wd.findElement(By.name("submit_search")).click();
+        type(By.id("search_query_top"), searchData.getNameProduct());
+        click(By.name("submit_search"));
     }
+
 }
