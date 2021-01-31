@@ -6,7 +6,7 @@ import testProject.model.SearchData;
 public class AddInWishListTests extends TestBase {
 
     @Test
-    public void addWishListTest() throws Exception {
+    public void addInWishListTest() throws Exception {
         app.getSearchHelper().startSearch(new SearchData("Faded Short Sleeve T-shirts"));
         app.getWishListHelper().choiceProduct();
         app.getWishListHelper().addWhishList();

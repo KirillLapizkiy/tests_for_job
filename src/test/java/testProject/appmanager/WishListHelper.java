@@ -3,7 +3,7 @@ package testProject.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class WishListHelper extends HelperBase{
+public class WishListHelper extends HelperBase {
 
     public WishListHelper(WebDriver wd) {
         super(wd);
@@ -37,7 +37,7 @@ public class WishListHelper extends HelperBase{
     }
 
     public void AssignedNumbers(String value) {
-        type(By.id("quantity_1_1"),value);
+        type(By.id("quantity_1_1"), value);
 //        wd.findElement(By.id("quantity_1_1")).sendKeys(value);
     }
 
@@ -46,6 +46,11 @@ public class WishListHelper extends HelperBase{
 //        wd.findElement(By.id("quantity_1_1")).click();
         wd.findElement(By.id("quantity_1_1")).clear();
     }
+
+    public void DeleteFirstPositionFromWishList() {
+        click(By.xpath("//li[@id='wlp_1_1']/div/div[2]/div/a/i"));
+    }
+//    wd.findElement(By.xpath("//li[@id='wlp_1_1']/div/div[2]/div/a/i")).click();}
 
     public void EntenInWishList() {
         wd.get("http://automationpractice.com/index.php?controller=my-account");
