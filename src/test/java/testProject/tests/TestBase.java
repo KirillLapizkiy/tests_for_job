@@ -9,7 +9,7 @@ public class TestBase {
     // Выбор браузера для запуска автотестов осуществляется подстановкой в BrowserType.XXX.
     // Вебдрайверы IE и firefox лежат в репе, знаю, что это не канонично,
     // сделал так, что бы их не искали в интернете при проверке тестового
-    protected final ApplicationManager app = new ApplicationManager(BrowserType.IE);
+    protected final ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {
