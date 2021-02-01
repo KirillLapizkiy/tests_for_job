@@ -55,6 +55,13 @@ public class WishListHelper extends HelperBase {
     }
 
     public void EntenInWishList() {
+        //если находимся на странице,  с сназванием страницы MY ACCOUNT
+        // и с кнопкой "My wishlists", то неоткрываем по новой эту страницу
+        if (isElementPresent(By.tagName("page-heading"))
+                && wd.findElement(By.tagName("page-heading")).getText().equals("MY ACCOUNT")
+                && isElementPresent(By.name("My wishlists"))) {
+            return;
+        }
         wd.get("http://automationpractice.com/index.php?controller=my-account");
         click(By.xpath("//div[@id='center_column']/div/div[2]/ul/li/a/span"));
         click(By.linkText("My wishlist"));
