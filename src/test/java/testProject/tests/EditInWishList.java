@@ -8,7 +8,7 @@ public class EditInWishList extends TestBase {
     public void testEditProductInWishList() throws Exception {
         app.getWishListHelper().EntenInWishList();
         app.getWishListHelper().ChoiceFirstPositionInWishList();
-        app.getWishListHelper().AssignedNumbers("150");
+        app.getWishListHelper().AssignedNumbers("150", "High", true);
         app.getWishListHelper().ExitFromWishList();
         app.getWishListHelper().logout();
     }

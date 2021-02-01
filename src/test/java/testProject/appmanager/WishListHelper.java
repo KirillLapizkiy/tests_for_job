@@ -2,6 +2,8 @@ package testProject.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class WishListHelper extends HelperBase {
 
@@ -30,8 +32,17 @@ public class WishListHelper extends HelperBase {
         click(By.xpath("//div[@id='mywishlist']/ul/li/a/span"));
     }
 
-    public void AssignedNumbers(String value) {
+    //Если есть выпадающий список, то метод его заполнит данными из priority
+    //creation определяет в автотесте ожедание наличия дропбокса на странице
+    public void AssignedNumbers(String value, String priority, boolean creation) {
         type(By.id("quantity_1_1"), value);
+
+        if (creation) {
+            new Select(wd.findElement(By.id("priority_1_1"))).selectByVisibleText(priority);
+        } else {
+            Assert.assertFalse(IsElementPresent(By.id("priority_1_1")));
+        }
+
     }
 
     public void ChoiceFirstPositionInWishList() {

@@ -45,4 +45,13 @@ public class HelperBase {
             return false;
         }
     }
+
+    protected boolean IsElementPresent(By locator) {
+        try{
+        wd.findElement(locator);
+        return true;
+    } catch (NoSuchElementException ex){
+            return false;
+        }
+    }
 }
