@@ -1,5 +1,6 @@
 package testProject.appmanager;
 
+import com.sun.org.glassfish.gmbal.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
@@ -16,7 +17,8 @@ public class HelperBase {
         wd.findElement(locator).click();
     }
 
-    //если поле заполнено необходимым текстом, то ввод не будет осуществляться
+    @Description("Заполнение поля данными в text, если поле заполненно необходимым текстом (text), " +
+            "то повторного заполнения не будет.")
     protected void type(By locator, String text) {
         click(locator);
         if (text != null) {

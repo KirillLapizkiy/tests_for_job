@@ -1,9 +1,11 @@
 package testProject.appmanager;
 
+import com.sun.org.glassfish.gmbal.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import testProject.model.SearchData;
 
 public class WishListHelper extends HelperBase {
 
@@ -32,8 +34,8 @@ public class WishListHelper extends HelperBase {
         click(By.xpath("//div[@id='mywishlist']/ul/li/a/span"));
     }
 
-    //Если есть выпадающий список, то метод его заполнит данными из priority
-    //creation определяет в автотесте ожедание наличия дропбокса на странице
+    @Description("Если есть выпадающий список, то метод его заполнит данными из priority," +
+            "creation определяет в автотесте ожедание наличия дропбокса на странице")
     public void AssignedNumbers(String value, String priority, boolean creation) {
         type(By.id("quantity_1_1"), value);
 
@@ -54,9 +56,9 @@ public class WishListHelper extends HelperBase {
         click(By.xpath("//li[@id='wlp_1_1']/div/div[2]/div/a/i"));
     }
 
+    @Description("Вход в список желаний, если находимся на странице,  с сназванием страницы MY ACCOUNT" +
+            "и с кнопкой \"My wishlists\", то неоткрываем по новой эту страницу")
     public void EntenInWishList() {
-        //если находимся на странице,  с сназванием страницы MY ACCOUNT
-        // и с кнопкой "My wishlists", то неоткрываем по новой эту страницу
         if (isElementPresent(By.tagName("page-heading"))
                 && wd.findElement(By.tagName("page-heading")).getText().equals("MY ACCOUNT")
                 && isElementPresent(By.name("My wishlists"))) {
@@ -65,5 +67,21 @@ public class WishListHelper extends HelperBase {
         wd.get("http://automationpractice.com/index.php?controller=my-account");
         click(By.xpath("//div[@id='center_column']/div/div[2]/ul/li/a/span"));
         click(By.linkText("My wishlist"));
+    }
+
+    public void startSearch(SearchData searchData) {
+        type(By.id("search_query_top"), searchData.getNameProduct());
+        click(By.name("submit_search"));
+    }
+
+    public void insertItem(SearchData item) {
+        startSearch(item);
+        choiceProduct();
+        addWhishList();
+        closeWindowAfterChoiceProduct();
+    }
+
+    public boolean isThereADesiredItem() {
+       return isElementPresent(By.id("quantity_1_1"));
     }
 }
