@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testProject.tests.SearchTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-04T14:41:37" hostname="DESKTOP-95FJ5G0" time="9.946">
+  <properties/>
+  <testcase name="testSearchLine" classname="testProject.tests.SearchTest" time="9.946"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1612449669211	geckodriver	INFO	Listening on 127.0.0.1:2337
+1612449669669	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\kir9l\\AppData\\Local\\Temp\\rust_mozprofileLRUB4U"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612449675808	Marionette	INFO	Listening on port 55379
+1612449676061	Marionette	WARN	TLS certificate errors will be ignored for this session
+фев 04, 2021 9:41:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+JavaScript error: http://automationpractice.com/index.php, line 68: ReferenceError: osdlfm is not defined
+1612449707015	Marionette	INFO	Stopped listening on port 55379
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+]]></system-err>
+</testsuite>

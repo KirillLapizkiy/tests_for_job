@@ -1,6 +1,5 @@
 package testProject.appmanager;
 
-import com.sun.org.glassfish.gmbal.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -34,8 +33,10 @@ public class WishListHelper extends HelperBase {
         click(By.xpath("//div[@id='mywishlist']/ul/li/a/span"));
     }
 
-    @Description("Если есть выпадающий список, то метод его заполнит данными из priority," +
-            "creation определяет в автотесте ожедание наличия дропбокса на странице")
+    /**
+     * "Если есть выпадающий список, то метод его заполнит данными из priority,"
+     * "creation определяет в автотесте ожедание наличия дропбокса на странице"
+     */
     public void AssignedNumbers(String value, String priority, boolean creation) {
         type(By.id("quantity_1_1"), value);
 
@@ -56,9 +57,11 @@ public class WishListHelper extends HelperBase {
         click(By.xpath("//li[@id='wlp_1_1']/div/div[2]/div/a/i"));
     }
 
-    @Description("Вход в список желаний, если находимся на странице,  с сназванием страницы MY ACCOUNT" +
-            "и с кнопкой \"My wishlists\", то неоткрываем по новой эту страницу")
-    public void EntenInWishList() {
+    /**
+     * "Вход в список желаний, если находимся на странице,  с сназванием страницы MY ACCOUNT" +
+     * "и с кнопкой \"My wishlists\", то неоткрываем по новой эту страницу"
+     */
+    public void EnterInWishList() {
         if (isElementPresent(By.tagName("page-heading"))
                 && wd.findElement(By.tagName("page-heading")).getText().equals("MY ACCOUNT")
                 && isElementPresent(By.name("My wishlists"))) {
@@ -82,6 +85,6 @@ public class WishListHelper extends HelperBase {
     }
 
     public boolean isThereADesiredItem() {
-       return isElementPresent(By.id("quantity_1_1"));
+        return isElementPresent(By.id("quantity_1_1"));
     }
 }

@@ -4,8 +4,20 @@ repositories {
     mavenCentral()
 }
 
-dependencies{
-    compile'org.testng:testng:7.0.0'
+dependencies {
+    compile 'org.testng:testng:7.0.0'
     compile 'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-6'
+    compile 'com.thoughtworks.xstream:xstream:1.4.15'
 }
 
+task testWishList(type: Test) {
+    useTestNG {
+        suites 'src/test/java/testProject/resources/testng-wishlist.xml'
+    }
+}
+
+task testSearch(type: Test) {
+    useTestNG {
+        suites 'src/test/java/testProject/resources/testng-search.xml'
+    }
+}

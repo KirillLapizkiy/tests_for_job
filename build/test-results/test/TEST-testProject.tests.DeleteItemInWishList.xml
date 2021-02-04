@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testProject.tests.DeleteItemInWishList" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-04T14:39:01" hostname="DESKTOP-95FJ5G0" time="43.57">
+  <properties/>
+  <testcase name="testDeleteItemInWishList" classname="testProject.tests.DeleteItemInWishList" time="43.57"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1612449518286	geckodriver	INFO	Listening on 127.0.0.1:18376
+1612449518712	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\kir9l\\AppData\\Local\\Temp\\rust_mozprofilef9G9Gc"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612449524941	Marionette	INFO	Listening on port 58328
+1612449525110	Marionette	WARN	TLS certificate errors will be ignored for this session
+фев 04, 2021 9:38:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1612449584754	Marionette	INFO	Stopped listening on port 58328
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+]]></system-err>
+</testsuite>

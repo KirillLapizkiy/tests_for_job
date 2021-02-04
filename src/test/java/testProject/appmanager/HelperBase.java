@@ -1,6 +1,5 @@
 package testProject.appmanager;
 
-import com.sun.org.glassfish.gmbal.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
@@ -17,13 +16,15 @@ public class HelperBase {
         wd.findElement(locator).click();
     }
 
-    @Description("Заполнение поля данными в text, если поле заполненно необходимым текстом (text), " +
-            "то повторного заполнения не будет.")
+    /**
+     * "Заполнение поля данными в text, если поле заполненно необходимым текстом (text), "
+     * "то повторного заполнения не будет."
+     */
     protected void type(By locator, String text) {
         click(locator);
         if (text != null) {
             String existingText = wd.findElement(locator).getAttribute("value");
-            if (! text.equals(existingText)) {
+            if (!text.equals(existingText)) {
                 wd.findElement(locator).clear();
                 wd.findElement(locator).sendKeys(text);
             }
@@ -49,10 +50,10 @@ public class HelperBase {
     }
 
     protected boolean IsElementPresent(By locator) {
-        try{
-        wd.findElement(locator);
-        return true;
-    } catch (NoSuchElementException ex){
+        try {
+            wd.findElement(locator);
+            return true;
+        } catch (NoSuchElementException ex) {
             return false;
         }
     }
