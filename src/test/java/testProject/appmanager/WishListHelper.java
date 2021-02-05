@@ -20,7 +20,7 @@ public class WishListHelper extends HelperBase {
         click(By.xpath("//body[@id='product']/div[2]/div/div/a"));
     }
 
-    public void addWhishList() {
+    public void addWishList() {
         click(By.id("wishlist_button"));
     }
 
@@ -80,7 +80,7 @@ public class WishListHelper extends HelperBase {
     public void insertItem(SearchData item) {
         startSearch(item);
         choiceProduct();
-        addWhishList();
+        addWishList();
         closeWindowAfterChoiceProduct();
     }
 

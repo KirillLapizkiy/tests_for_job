@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1612513971315" stop="1612514121180">
+    <name>Suite1</name>
+    <test-cases>
+        <test-case start="1612513999184" stop="1612514008142" status="passed">
+            <name>addInWishListTest</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1612514030748" stop="1612514065137" status="passed">
+            <name>testEditProductInWishList</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1612514087329" stop="1612514119886" status="passed">
+            <name>testDeleteItemInWishList</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+    </test-cases>
+    <labels/>
+</ns2:test-suite>

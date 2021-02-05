@@ -1,0 +1,60 @@
+{
+  "time" : {
+    "start" : 1612513999184,
+    "stop" : 1612514119886,
+    "duration" : 120702
+  },
+  "testSuites" : [ {
+    "uid" : "f576896f054f2579",
+    "name" : "Suite1",
+    "title" : "Suite 1",
+    "time" : {
+      "start" : 1612513999184,
+      "stop" : 1612514119886,
+      "duration" : 120702
+    },
+    "statistic" : {
+      "total" : 3,
+      "passed" : 3,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "2200499cf7258ae6",
+      "name" : "addInWishListTest",
+      "title" : "Add in wish list test",
+      "time" : {
+        "start" : 1612513999184,
+        "stop" : 1612514008142,
+        "duration" : 8958
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "9ba5df5c50cbd6b5",
+      "name" : "testEditProductInWishList",
+      "title" : "Test edit product in wish list",
+      "time" : {
+        "start" : 1612514030748,
+        "stop" : 1612514065137,
+        "duration" : 34389
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "fc22d6bbf77ab3a0",
+      "name" : "testDeleteItemInWishList",
+      "title" : "Test delete item in wish list",
+      "time" : {
+        "start" : 1612514087329,
+        "stop" : 1612514119886,
+        "duration" : 32557
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

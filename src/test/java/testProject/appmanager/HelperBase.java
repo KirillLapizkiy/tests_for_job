@@ -12,12 +12,15 @@ public class HelperBase {
         this.wd = wd;
     }
 
+    /**
+     * Метод кликает по выбранному локатору
+     */
     protected void click(By locator) {
         wd.findElement(locator).click();
     }
 
     /**
-     * "Заполнение поля данными в text, если поле заполненно необходимым текстом (text), "
+     * "Метод заполнения поля данными в text, если поле заполнено необходимым текстом (text), "
      * "то повторного заполнения не будет."
      */
     protected void type(By locator, String text) {

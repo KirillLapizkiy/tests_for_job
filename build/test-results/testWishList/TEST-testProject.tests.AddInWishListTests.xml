@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testProject.tests.AddInWishListTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-05T08:03:25" hostname="DESKTOP-95FJ5G0" time="10.584">
+<testsuite name="testProject.tests.AddInWishListTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-05T08:33:19" hostname="DESKTOP-95FJ5G0" time="8.978">
   <properties/>
-  <testcase name="addInWishListTest" classname="testProject.tests.AddInWishListTests" time="10.584"/>
+  <testcase name="addInWishListTest" classname="testProject.tests.AddInWishListTests" time="8.978"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-1612512176949	geckodriver	INFO	Listening on 127.0.0.1:48167
-1612512179013	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\kir9l\\AppData\\Local\\Temp\\rust_mozprofileeLEnzG"
+  <system-err><![CDATA[1612513974964	geckodriver	INFO	Listening on 127.0.0.1:26582
+1612513977631	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\kir9l\\AppData\\Local\\Temp\\rust_mozprofileXNnjPe"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1612512186019	Marionette	INFO	Listening on port 61306
-1612512186319	Marionette	WARN	TLS certificate errors will be ignored for this session
-фев 05, 2021 3:03:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1612513984761	Marionette	INFO	Listening on port 62368
+1612513985131	Marionette	WARN	TLS certificate errors will be ignored for this session
+фев 05, 2021 3:33:05 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-JavaScript error: http://automationpractice.com/index.php, line 68: ReferenceError: osdlfm is not defined
-1612512216293	Marionette	INFO	Stopped listening on port 61306
+1612514008451	Marionette	INFO	Stopped listening on port 62368
+[Parent 8448, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:166
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
