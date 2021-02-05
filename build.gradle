@@ -14,10 +14,16 @@ task testWishList(type: Test) {
     useTestNG {
         suites 'src/test/java/testProject/resources/testng-wishlist.xml'
     }
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
 }
 
 task testSearch(type: Test) {
     useTestNG {
         suites 'src/test/java/testProject/resources/testng-search.xml'
+    }
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
     }
 }

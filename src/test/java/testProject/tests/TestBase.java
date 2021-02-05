@@ -11,7 +11,7 @@ public class TestBase {
      * "Вебдрайверы IE и firefox лежат в репе, знаю, что это не канонично,"
      * "сделал так, что бы их не искали в интернете при проверке тестового"
      */
-    protected final ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
+    protected static final ApplicationManager app = new ApplicationManager(System.getProperty("browser",BrowserType.FIREFOX));
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {

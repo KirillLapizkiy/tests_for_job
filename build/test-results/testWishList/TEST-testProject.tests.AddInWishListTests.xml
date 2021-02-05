@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testProject.tests.AddInWishListTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-04T14:54:17" hostname="DESKTOP-95FJ5G0" time="9.035">
+<testsuite name="testProject.tests.AddInWishListTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-04T15:10:10" hostname="DESKTOP-95FJ5G0" time="9.946">
   <properties/>
-  <testcase name="addInWishListTest" classname="testProject.tests.AddInWishListTests" time="9.035"/>
+  <testcase name="addInWishListTest" classname="testProject.tests.AddInWishListTests" time="9.946"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-1612450434191	geckodriver	INFO	Listening on 127.0.0.1:24199
-1612450435937	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\kir9l\\AppData\\Local\\Temp\\rust_mozprofilewizZgi"
+1612451382538	geckodriver	INFO	Listening on 127.0.0.1:33571
+1612451384358	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\kir9l\\AppData\\Local\\Temp\\rust_mozprofile6jR1C2"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1612450441972	Marionette	INFO	Listening on port 55346
-1612450442304	Marionette	WARN	TLS certificate errors will be ignored for this session
-фев 04, 2021 9:54:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1612451390486	Marionette	INFO	Listening on port 55060
+1612451390756	Marionette	WARN	TLS certificate errors will be ignored for this session
+фев 04, 2021 10:09:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-JavaScript error: http://p.2ad.wtf/ad/base.js?id=eea50531f1a393afcf02d064085c86732c12&rid=vD-iYVfcM9hgTlq2cksPmZMIFSU&reg=70&referer=http%3A%2F%2Fautomationpractice.com%2Findex.php&kw=My%2CStore%2CShop%2Cpowered%2Cby%2C%25%25automationpractice%25com%25%25&utcoffset=420&rbt=c,i,h,v, line 514: ReferenceError: _iframeWait is not defined
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
-1612450466922	Marionette	INFO	Stopped listening on port 55346
+1612451420231	Marionette	INFO	Stopped listening on port 55060
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 

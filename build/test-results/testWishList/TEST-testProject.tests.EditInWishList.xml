@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testProject.tests.EditInWishList" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-04T14:54:55" hostname="DESKTOP-95FJ5G0" time="41.298">
+<testsuite name="testProject.tests.EditInWishList" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-04T15:10:44" hostname="DESKTOP-95FJ5G0" time="37.359">
   <properties/>
-  <testcase name="testEditProductInWishList" classname="testProject.tests.EditInWishList" time="41.298"/>
+  <testcase name="testEditProductInWishList" classname="testProject.tests.EditInWishList" time="37.359"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[1612450470226	geckodriver	INFO	Listening on 127.0.0.1:2557
-1612450470667	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\kir9l\\AppData\\Local\\Temp\\rust_mozprofilewgLPlJ"
+  <system-err><![CDATA[1612451422462	geckodriver	INFO	Listening on 127.0.0.1:3861
+1612451422934	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\kir9l\\AppData\\Local\\Temp\\rust_mozprofilengiJbh"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1612450478126	Marionette	INFO	Listening on port 65345
-1612450478641	Marionette	WARN	TLS certificate errors will be ignored for this session
-фев 04, 2021 9:54:38 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1612451429061	Marionette	INFO	Listening on port 63232
+1612451429353	Marionette	WARN	TLS certificate errors will be ignored for this session
+фев 04, 2021 10:10:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-JavaScript error: http://automationpractice.com/index.php, line 68: ReferenceError: osdlfm is not defined
-1612450536927	Marionette	INFO	Stopped listening on port 65345
+JavaScript error: http://p.2ad.wtf/ad/base.js?id=eea50531f1a393afcf02d064085c86732c12&rid=9iKH-8Hhs-YJMLcBwylC95ds1g8&reg=70&referer=http%3A%2F%2Fautomationpractice.com%2Findex.php&kw=My%2CStore%2CShop%2Cpowered%2Cby%2C%25%25automationpractice%25com%25%25&utcoffset=420&rbt=c,i,h,v, line 514: ReferenceError: _iframeWait is not defined
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+1612451481475	Marionette	INFO	Stopped listening on port 63232
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 

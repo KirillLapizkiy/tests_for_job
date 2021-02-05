@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testProject.tests.DeleteItemInWishList" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-04T14:56:02" hostname="DESKTOP-95FJ5G0" time="33.952">
+<testsuite name="testProject.tests.DeleteItemInWishList" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-04T15:11:43" hostname="DESKTOP-95FJ5G0" time="37.464">
   <properties/>
-  <testcase name="testDeleteItemInWishList" classname="testProject.tests.DeleteItemInWishList" time="33.952"/>
+  <testcase name="testDeleteItemInWishList" classname="testProject.tests.DeleteItemInWishList" time="37.464"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[1612450538665	geckodriver	INFO	Listening on 127.0.0.1:8101
-1612450538897	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\kir9l\\AppData\\Local\\Temp\\rust_mozprofileZ5GMSX"
+  <system-err><![CDATA[1612451483299	geckodriver	INFO	Listening on 127.0.0.1:34116
+1612451483651	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\kir9l\\AppData\\Local\\Temp\\rust_mozprofileNkX1Q0"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1612450545557	Marionette	INFO	Listening on port 64664
-1612450545906	Marionette	WARN	TLS certificate errors will be ignored for this session
-фев 04, 2021 9:55:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1612451489775	Marionette	INFO	Listening on port 64789
+1612451490060	Marionette	WARN	TLS certificate errors will be ignored for this session
+фев 04, 2021 10:11:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Can't find symbol 'eglSwapBuffersWithDamageEXT'.
-Can't find symbol 'eglSetDamageRegionKHR'.
-1612450596213	Marionette	INFO	Stopped listening on port 64664
+1612451541258	Marionette	INFO	Stopped listening on port 64789
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
-JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 426: Error: OS.File has been shut down. Rejecting post to stat
 ]]></system-err>
 </testsuite>

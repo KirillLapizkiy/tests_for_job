@@ -1,22 +1,22 @@
-testProject/tests/TestBase.java
- testProject.tests.TestBase
+testProject/appmanager/SessionHelper.java
+ testProject.appmanager.SessionHelper
 testProject/model/SearchData.java
  testProject.model.SearchData
+testProject/appmanager/WishListHelper.java
+ testProject.appmanager.WishListHelper
+testProject/appmanager/SearchHelper.java
+ testProject.appmanager.SearchHelper
+testProject/appmanager/HelperBase.java
+ testProject.appmanager.HelperBase
+testProject/tests/TestBase.java
+ testProject.tests.TestBase
 testProject/tests/AddInWishListTests.java
  testProject.tests.AddInWishListTests
 testProject/tests/EditInWishList.java
  testProject.tests.EditInWishList
-testProject/appmanager/HelperBase.java
- testProject.appmanager.HelperBase
-testProject/appmanager/WishListHelper.java
- testProject.appmanager.WishListHelper
 testProject/tests/DeleteItemInWishList.java
  testProject.tests.DeleteItemInWishList
 testProject/appmanager/ApplicationManager.java
  testProject.appmanager.ApplicationManager
-testProject/appmanager/SearchHelper.java
- testProject.appmanager.SearchHelper
 testProject/tests/SearchTest.java
  testProject.tests.SearchTest
-testProject/appmanager/SessionHelper.java
- testProject.appmanager.SessionHelper
