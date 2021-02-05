@@ -17,6 +17,9 @@ task testWishList(type: Test) {
     if (project.hasProperty('browser')) {
         systemProperty 'browser', "${browser}"
     }
+    if (project.hasProperty('target')) {
+        systemProperty 'target', "${target}"
+    }
 }
 
 task testSearch(type: Test) {
@@ -25,5 +28,8 @@ task testSearch(type: Test) {
     }
     if (project.hasProperty('browser')) {
         systemProperty 'browser', "${browser}"
+    }
+    if (project.hasProperty('target')) {
+        systemProperty 'target', "${target}"
     }
 }

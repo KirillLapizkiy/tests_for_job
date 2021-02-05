@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testProject.tests.SearchTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-05T08:02:39" hostname="DESKTOP-95FJ5G0" time="5.2">
+  <properties/>
+  <testcase name="testSearchLine" classname="testProject.tests.SearchTest" time="5.2"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+1612512131607	geckodriver	INFO	Listening on 127.0.0.1:10766
+1612512133651	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\kir9l\\AppData\\Local\\Temp\\rust_mozprofilerJFa2a"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612512140990	Marionette	INFO	Listening on port 61179
+1612512141145	Marionette	WARN	TLS certificate errors will be ignored for this session
+фев 05, 2021 3:02:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1612512165096	Marionette	INFO	Stopped listening on port 61179
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+]]></system-err>
+</testsuite>
