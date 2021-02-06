@@ -1,10 +1,6 @@
-Репозиторий проекта:
-https://github.com/KirillLapizkiy/tests_for_job
-
 Проект написан на: java 8.0 + TestNG + Selenium + Gradle
 
-Тестируемый сайт http://automationpractice.com/index.php, выбран наугад, 
-при запросе в гугле "сайты для написания автотестов".
+Тестируемый сайт http://automationpractice.com/index.php
 
 **Настройка проекта**
 1. В Settings->Build,Execution,Deployment->Build Tools->Gradle установить:
@@ -24,8 +20,6 @@ https://github.com/KirillLapizkiy/tests_for_job
 2. Автотесты запускаются тестовыми наборами(suits) тасками из файла build.gradle
 `task testWishList
 task testSearch`
-2.1 Так же автотесты можно запускать и по одному, в случае тестов на создание или редактирование в вишлисте,
-   если вишлсит пустой, то в него добавится товар самим автотестом
 
 3. После прогона формируется отчет allure в папке target\allure-results (приложено два примера от прогонов)
 
