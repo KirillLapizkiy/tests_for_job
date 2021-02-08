@@ -6,7 +6,7 @@ import testProject.model.SearchData;
 public class DeleteItemInWishList extends TestBase {
 
     /**
-     * "Автотест на удаление первой позиии в вишлисте,
+     * "Автотест на удаление первой позици в вишлисте,
      * если вишлист пустой, то автотест сам наполнит его."
      */
     @Test
@@ -14,6 +14,7 @@ public class DeleteItemInWishList extends TestBase {
         app.getWishListHelper().EnterInWishList();
         if (!app.getWishListHelper().isThereADesiredItem()) {
             app.getWishListHelper().insertItem(new SearchData("Faded Short Sleeve T-shirts"));
+            app.getWishListHelper().closeWindow();
         }
         app.getWishListHelper().EnterInWishList();
         app.getWishListHelper().ChoiceFirstPositionInWishList();

@@ -14,6 +14,7 @@ public class EditInWishList extends TestBase {
         app.getWishListHelper().EnterInWishList();
         if (!app.getWishListHelper().isThereADesiredItem()) {
             app.getWishListHelper().insertItem(new SearchData("Faded Short Sleeve T-shirts"));
+            app.getWishListHelper().closeWindow();
         }
         app.getWishListHelper().EnterInWishList();
         app.getWishListHelper().ChoiceFirstPositionInWishList();

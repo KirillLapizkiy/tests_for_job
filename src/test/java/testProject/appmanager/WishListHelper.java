@@ -81,7 +81,14 @@ public class WishListHelper extends HelperBase {
         startSearch(item);
         choiceProduct();
         addWishList();
+    }
+
+    public void closeWindow() {
         closeWindowAfterChoiceProduct();
+    }
+
+    public void CheckTextPopup( String expectedText){
+        Assert.assertEquals(wd.findElement(By.className("fancybox-error")).getText(), expectedText);
     }
 
     public boolean isThereADesiredItem() {
